@@ -1,0 +1,34 @@
+@mixin box{
+	display: -webkit-box;
+    display: box;
+}
+@mixin flex($flex:1){
+	-webkit-box-flex: $flex;
+        	box-flex: $flex;
+}
+@mixin boxsizing{
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+@mixin translate($x:-50%,$y:-50%){
+    transform: translate($x,$y);
+}
+
+
+@mixin textell($line:1){
+	overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+@mixin _animate($type : all , $sec : .3s , $ease : ease) {
+	transition: $type $sec $ease;
+}
+
+@function pxToRem($px, $base: 75) {
+  @return ($px / $base) + rem;
+}
+

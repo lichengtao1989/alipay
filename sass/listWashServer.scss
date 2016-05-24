@@ -1,0 +1,140 @@
+@charset "UTF-8";
+@import "mixin";
+%noDate{
+	padding:pxToRem(150) pxToRem(30);
+	font-size:pxToRem(36);
+	line-height:pxToRem(44);
+	text-align:center;
+	color:#98989a;
+	.red{
+		color:red;
+	}
+}
+.washCarList{
+	.noDate{
+		@extend %noDate;
+		padding-top:pxToRem(500);
+		background-image:url('../images/nowash.png');
+		background-repeat:no-repeat;
+		background-size:pxToRem(270) auto;
+		background-position:center pxToRem(180);
+	}
+	dd{
+		padding:pxToRem(25) pxToRem(30) 0 pxToRem(30);
+		background:#fff;
+		@include box;
+		&:last-child{
+			border:0 none;
+		}
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.layImg{
+		width: pxToRem(150);
+		padding-right:pxToRem(38);
+		position:relative;
+		background-position:left top;
+		background-repeat:no-repeat;
+		background-size:pxToRem(150) pxToRem(150);
+		min-height:pxToRem(150);
+		background-image: url("../images/placeholder.png?__inline");
+	}
+	.mainInfo{
+		@include box;
+		@include flex;
+		padding-bottom:pxToRem(36);
+		
+	}
+	._comment{
+		padding:pxToRem(5) 0 pxToRem(30);
+		height:pxToRem(28);
+		span{
+			display:inline-block;
+			width:pxToRem(28);
+			height:pxToRem(28);
+			background-size:pxToRem(28);
+		}
+	}
+	._position{
+		font-size:pxToRem(26);
+		color:#888;
+		height:pxToRem(28);
+		line-height:pxToRem(30);
+		@include textell;
+	}
+	._title{
+		._tit{
+			@include flex;
+			font-size:pxToRem(34);
+			&.disabled{
+				color:#888;
+			}
+		}
+		._tip{
+			margin-left:pxToRem(5);
+			display: inline-block;
+			border:1px solid #00aaee;
+			color:#00aaee;
+			padding:pxToRem(9);
+			border-radius:4px;
+			@include flex;
+			min-width:pxToRem(100);
+			font-size:pxToRem(20);
+			line-height:pxToRem(22);
+			position:relative;
+			top:pxToRem(-3);
+			&.disabled{
+				color:#888;
+				border:1px solid #888;
+			}
+		}
+		
+	}
+	._right,._left{
+			@include flex;
+		}
+		._left{
+			line-height:pxToRem(50);
+		}
+		._right{
+			line-height:pxToRem(50);
+			min-width:pxToRem(120);
+			position:relative;
+			s,em{
+				display:block;
+			}
+			s{
+				font-size:pxToRem(28);
+				line-height:pxToRem(30);
+				color:#888;
+			}
+			em{
+				line-height:pxToRem(50);
+				font-size:pxToRem(44);
+				color:#ff6700;
+				padding-bottom:pxToRem(10);
+			}
+			.sleep{
+				display: inline-block;
+				background:#d8d8d8;
+				color:#fff;
+				font-size:pxToRem(20);
+				line-height:pxToRem(24);
+				/* position:absolute;
+				bottom:0;
+				right:0; */
+				margin-top:pxToRem(24);
+				padding: pxToRem(5) pxToRem(10);
+				border-radius:pxToRem(5);
+			}
+		}
+
+}
+
+
+
+.nopad{
+	padding-top:0;
+	.noDate{
+		@extend %noDate;
+	}
+}

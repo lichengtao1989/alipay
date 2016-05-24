@@ -1,0 +1,90 @@
+@charset"UTF-8";
+@import "mixin";
+.detialBrand{
+
+	.title {
+	    display: block;
+	    height:pxToRem(100);
+	    font-size:pxToRem(30);
+	    line-height: pxToRem(100);
+	    background: #efeff4;
+	    padding-left: pxToRem(10);
+	    border-bottom: 1px solid #d7d7d7;
+	}
+	.detiCar {
+		font-size:pxToRem(30);
+		a{
+			display: block;
+		    height: pxToRem(100);
+		    line-height: pxToRem(100);
+		    padding-left:pxToRem(120);
+		    position: relative;
+		    border-bottom: 1px solid #d7d7d7;
+		    &.selected {
+			    border-left: 5px solid #df4338;
+			}
+		}
+		span {
+		    color: #333;
+		    padding-left:pxToRem(10);
+		    font-size:pxToRem(30);
+		}
+		img {
+		    width: pxToRem(80);
+		    height: pxToRem(80);
+		    position: absolute;
+		    top: 50%;
+		    left: .2rem;
+		    transform: translateY(-50%);
+		}
+	}
+} 
+
+.slideBar {   
+    position: fixed;
+    top: .3rem;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    ul {
+	    height: 100%;
+	    display: -webkit-box;
+	    display: -webkit-flex;
+	    display: flex;
+	    -ms-flex-flow: column;
+	    -webkit-flex-flow: column;
+	    flex-flow: column;
+	    -webkit-box-direction: normal;
+	    -webkit-box-orient: vertical;
+	    -webkit-flex-direction: column;
+	    flex-direction: column;
+	    -webkit-align-items: center;
+	    align-items: center;
+	    -webkit-justify-content: space-around;
+	    justify-content: space-around;
+	    li {
+		    line-height: normal;
+		    -webkit-box-flex: 1;
+		    box-flex: 1.0;
+		    -webkit-flex: 1 1 auto;
+		    flex: 1 1 auto;
+		    color: #666;
+		    font-size: pxToRem(20);
+		    text-transform: uppercase;
+		    width: pxToRem(40);
+		    text-align: center;
+		}
+	}
+}
+
+ 

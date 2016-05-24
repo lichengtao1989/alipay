@@ -1,0 +1,201 @@
+.head_select_list {
+  display: -webkit-box;
+  display: box;
+  height: 1.12rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 505;
+  background: #fff;
+  box-shadow: 0 -1px 0 0 #ddd inset;
+  overflow: hidden;
+}
+.head_select_list dd {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  text-align: center;
+  line-height: 1.12rem;
+  color: #a5a5a5;
+  position: relative;
+}
+.head_select_list dd:after {
+  content: "";
+  height: 0.74667rem;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -0.37333rem;
+  width: 1px;
+  background: #e8e8e8;
+}
+.head_select_list dd .text {
+  font-size: 0.4rem;
+  line-height: 1.12rem;
+  color: #333;
+  max-width: 2.66667rem;
+}
+.head_select_list dd .icon, .head_select_list dd .text {
+  display: inline-block;
+  height: 1.12rem;
+  overflow: hidden;
+}
+.head_select_list dd .icon {
+  background-image: url("../images/j_bot.png?__inline");
+  margin-left: 0.06667rem;
+  width: 0.24rem;
+  background-size: 100% auto;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.head_select_list dd.active .text {
+  color: #00aaee;
+}
+.head_select_list dd.active .icon {
+  background-image: url("../images/j_top.png?__inline");
+}
+
+.head_select_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 499;
+  top: 1.12rem;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.head_select_box .head_select_box_porvince, .head_select_box .head_select_box_city {
+  position: relative;
+}
+.head_select_box .scrollBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.head_select_box .mask {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.head_select_box .item {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: box;
+  height: 100%;
+  overflow: hidden;
+}
+.head_select_box .item.hide {
+  display: none;
+}
+.head_select_box .item ul {
+  width: 100%;
+}
+.head_select_box .item li {
+  font-size: 0.4rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  color: #333;
+}
+.head_select_box .item li.active {
+  color: #00aaee;
+}
+.head_select_box .aro-two-one, .head_select_box .aro-two-two {
+  overflow: hidden;
+  height: 100%;
+}
+.head_select_box .aro-two-one li, .head_select_box .aro-two-two li {
+  height: 1.36rem;
+  line-height: 1.36rem;
+}
+.head_select_box .aro-two-one li.active, .head_select_box .aro-two-two li.active {
+  background: #fff;
+}
+.head_select_box .aro-two-one {
+  background: #f5f5f9;
+  width: 5rem;
+}
+.head_select_box .aro-two-one li {
+  padding: 0 0.26667rem 0 0.61333rem;
+}
+.head_select_box .aro-two-two {
+  background: #fff;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.head_select_box .aro-two-two ul {
+  padding-left: 0.48rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.head_select_box .aro-two-two li {
+  padding: 0 0.26667rem 0 0;
+  border-top: 1px solid #e5e5e5;
+}
+.head_select_box .aro-two-two li:first-child {
+  border: 0 none;
+}
+.head_select_box .aro-one li {
+  height: 1.38667rem;
+  line-height: 1.38667rem;
+  border-top: 1px solid #e5e5e5;
+  background: #fff;
+  padding: 0 0.48rem;
+}
+.head_select_box .aro-one li:first-child {
+  border: 0 none;
+}
+.head_select_box .aro-one li.active {
+  background: #f5f5f9;
+}
+
+#pullDown, #pullUp {
+  height: 1.06667rem;
+  text-align: center;
+  line-height: 1.06667rem;
+  font-size: 0.32rem;
+  color: #ccc;
+}
+@keyframes loadings {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#pullDown.loading .pullDownLabel, #pullDown.loading .pullUpLabel, #pullUp.loading .pullDownLabel, #pullUp.loading .pullUpLabel {
+  font-size: 0;
+  display: inline-block;
+  width: 0.58667rem;
+  height: 0.58667rem;
+  border: 2px solid #0ae;
+  border-right: 2px solid transparent;
+  position: relative;
+  top: 0.13333rem;
+  border-radius: 50%;
+  animation: loadings 1s infinite linear;
+  -webkit-animation: loadings 1s infinite linear;
+}
+
+.waprA {
+  position: absolute;
+  top: 1.12rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

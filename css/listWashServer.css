@@ -1,0 +1,136 @@
+.washCarList .noDate, .nopad .noDate {
+  padding: 2rem 0.4rem;
+  font-size: 0.48rem;
+  line-height: 0.58667rem;
+  text-align: center;
+  color: #98989a;
+}
+.washCarList .noDate .red, .nopad .noDate .red {
+  color: red;
+}
+
+.washCarList .noDate {
+  padding-top: 6.66667rem;
+  background-image: url("../images/nowash.png");
+  background-repeat: no-repeat;
+  background-size: 3.6rem auto;
+  background-position: center 2.4rem;
+}
+.washCarList dd {
+  padding: 0.33333rem 0.4rem 0 0.4rem;
+  background: #fff;
+  display: -webkit-box;
+  display: box;
+  border-bottom: 1px solid #e5e5e5;
+}
+.washCarList dd:last-child {
+  border: 0 none;
+}
+.washCarList .layImg {
+  width: 2rem;
+  padding-right: 0.50667rem;
+  position: relative;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 2rem 2rem;
+  min-height: 2rem;
+  background-image: url("../images/placeholder.png?__inline");
+}
+.washCarList .mainInfo {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  padding-bottom: 0.48rem;
+}
+.washCarList ._comment {
+  padding: 0.06667rem 0 0.4rem;
+  height: 0.37333rem;
+}
+.washCarList ._comment span {
+  display: inline-block;
+  width: 0.37333rem;
+  height: 0.37333rem;
+  background-size: 0.37333rem;
+}
+.washCarList ._position {
+  font-size: 0.34667rem;
+  color: #888;
+  height: 0.37333rem;
+  line-height: 0.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.washCarList ._title ._tit {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  font-size: 0.45333rem;
+}
+.washCarList ._title ._tit.disabled {
+  color: #888;
+}
+.washCarList ._title ._tip {
+  margin-left: 0.06667rem;
+  display: inline-block;
+  border: 1px solid #00aaee;
+  color: #00aaee;
+  padding: 0.12rem;
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  min-width: 1.33333rem;
+  font-size: 0.26667rem;
+  line-height: 0.29333rem;
+  position: relative;
+  top: -0.04rem;
+}
+.washCarList ._title ._tip.disabled {
+  color: #888;
+  border: 1px solid #888;
+}
+.washCarList ._right, .washCarList ._left {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.washCarList ._left {
+  line-height: 0.66667rem;
+}
+.washCarList ._right {
+  line-height: 0.66667rem;
+  min-width: 1.6rem;
+  position: relative;
+}
+.washCarList ._right s, .washCarList ._right em {
+  display: block;
+}
+.washCarList ._right s {
+  font-size: 0.37333rem;
+  line-height: 0.4rem;
+  color: #888;
+}
+.washCarList ._right em {
+  line-height: 0.66667rem;
+  font-size: 0.58667rem;
+  color: #ff6700;
+  padding-bottom: 0.13333rem;
+}
+.washCarList ._right .sleep {
+  display: inline-block;
+  background: #d8d8d8;
+  color: #fff;
+  font-size: 0.26667rem;
+  line-height: 0.32rem;
+  /* position:absolute;
+  bottom:0;
+  right:0; */
+  margin-top: 0.32rem;
+  padding: 0.06667rem 0.13333rem;
+  border-radius: 0.06667rem;
+}
+
+.nopad {
+  padding-top: 0;
+}

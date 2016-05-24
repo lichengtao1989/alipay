@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="msapplication-tap-highlight" content="no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/washCarService.css">
+		<script type="text/javascript">!function(n,e){var t=function(){var n=32,t=e.documentElement,i=t.clientWidth;i&&(t.style.fontSize=n*(i/320)+"px")};if(e.addEventListener){var i="orientationchange"in n?"orientationchange":"resize";n.addEventListener(i,t,!1),e.addEventListener("DOMContentLoaded",t,!1),t()}}(window,document);</script>
+    	<title>洗车服务</title>
+</head>
+<body>
+	<div id="warpBox">
+		<dl id="selectBtn" class="head_select_list">
+			<dd><span class="text">北京市</span><span class="icon">&nbsp;</span></dd>
+			<dd><span class="text">距离优先</span><span class="icon">&nbsp;</span></dd>
+			<dd><span class="text">普洗(5座)</span><span class="icon">&nbsp;</span></dd>
+		</dl>
+		<div id="selectBox" class="head_select_box hide">
+			<div id="cityList" class="item aro-two posChoice hide"></div>
+			<div class="item aro-one othChoice hide">
+				<ul>
+					<li class="active">距离优先</li>
+					<li>评价优先</li>
+				</ul>
+			</div>
+			<div class="item aro-one serChoice hide ">
+				<ul>
+					<li class="active">普洗(5座)</li>
+					<li>普洗(7座)</li>
+					<li>精洗(5座)</li>
+					<li>精洗(7座)</li>
+				</ul>
+			</div>
+		</div>
+		<div class="waprA" id="wrapperA">
+			<div>
+				<div id="pullDown">
+                    <span class="pullDownLabel">下拉刷新</span>
+                </div>
+			    <dl class="washCarList" id="washCarList">
+		    		<dd data-opentime="10:00" data-closetime="23:00">
+                        <div class="layImg" style="background-image: url(&quot;images/d.png&quot;);"></div>
+                        <div class="mainInfo">
+                            <div class="_left">
+                                <div class="_title">
+                                    <span class="_tit ">车友之家</span>
+                                </div>
+                                <div class="_comment" data-comment="3">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="unstar"></span>
+                                    <span class="unstar"></span>
+                                </div>
+                                <div class="_position">0.31km 朝阳区呼家楼街道旺座中心</div>
+                            </div>
+                            <div class="_right t_r">
+                                <em>￥86</em>
+                                <s>￥98</s>
+                            </div>
+                        </div>
+                    </dd>
+		    	</dl>
+		    	<div id="pullUp">
+                    <span class="pullUpLabel">上拉加载更多</span>
+                </div>
+	    	</div>
+    	</div>
+    	<div class="loading--fullscreen" id="loadingBox">
+	        <span class="loading__box"><i class="loading__icon"></i></span>
+	    </div>
+	</div>
+</body>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/washCarService.js?__inline"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=abcs"></script>  
+<script type="text/javascript">
+	var geolocation = new BMap.Geolocation();
+	var gc = new BMap.Geocoder();  
+	geolocation.getCurrentPosition( function(r){
+		if(this.getStatus() == BMAP_STATUS_SUCCESS){ //通过Geolocation类的getStatus()可以判断是否成功定位。  
+			var pt = r.point;  
+			gc.getLocation(pt, function(rs){    
+				var addComp = rs.addressComponents;
+				var city=addComp.city;
+				lng = rs.point.lng;
+				lat = rs.point.lat;
+				console.log(rs);
+				QccrCom.setMsg(city);
+			});
+		}else{
+			QccrCom.setMsg('定位失败');
+		}
+	});
+
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="msapplication-tap-highlight" content="no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/payResult.css">
+		<script type="text/javascript">!function(n,e){var t=function(){var n=32,t=e.documentElement,i=t.clientWidth;i&&(t.style.fontSize=n*(i/320)+"px")};if(e.addEventListener){var i="orientationchange"in n?"orientationchange":"resize";n.addEventListener(i,t,!1),e.addEventListener("DOMContentLoaded",t,!1),t()}}(window,document);</script>
+    	<title>支付结果</title>
+</head>
+<body class="bg_white">
+	<div id="warpBox">
+		<div class="payResult">
+			<div class="payHead">
+				<div class="logo"><span></span></div>
+				<p class="payresult t_c">支付成功</p>
+				<p class="paymoney t_c">18.00</p>
+				<p class="payyj t_c">25.00元</p>
+			</div>
+			<div class="payConent">
+				<div class="item">
+					<div class="key">积分奖励</div>
+					<div class="value">获得<span class="red">135</span>会员积分，现有<span class="red">950</span> 积分</div>
+				</div>
+				<div class="item">
+					<div class="key">付款信息</div>
+					<div class="value">
+						<p class="_left">招商银行储蓄卡(8492)</p>
+						<p class="_right">18.00</p>
+					</div>
+				</div>
+			</div>
+			<div class="payEwmBox t_c">
+				<p class="_tit">请将以下核销码展示给商家</p>
+				<p class="_num" id="qrcodeNum" data-num="1728  8281  8191">1728  8281  8191</p>
+				<p class="ewmImg" id="qrcode"></p>
+			</div>
+			<div class="actionBtn t_c">
+				<a href="javascript:void(0);" class="btn_normal" id="cards">查看卡券详情</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/QRCode.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+		var qrcode = new QRCode(document.getElementById("qrcode"), {
+	        colorDark: "#000",
+	        colorLight: "#fff",
+	        correctLevel: QRCode.CorrectLevel.H
+	      });
+		qrcode.makeCode(document.getElementById('qrcodeNum').getAttribute('data-num').replace(/\s/g,''));
+	}
+</script>
+</html>

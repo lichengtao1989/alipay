@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/* 
+loading 样式
+ */
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading__box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: .3rem;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.loading__icon {
+  display: block;
+  width: .8rem;
+  height: .8rem;
+  border: 2px solid #00aaee;
+  border-right: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: loading 1s infinite linear;
+  animation: loading 1s infinite linear;
+}
+
+.loading--fullscreen {
+  background: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.t_r {
+  text-align: right;
+}
+
+.t_c {
+  text-align: center;
+}
+
+.star, .unstar {
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.unstar {
+  background-image: url("../images/unstar.png?__inline");
+}
+
+.stargery {
+  background-image: url("../images/stargery.png?__inline");
+}
+
+.star {
+  background-image: url("../images/star.png?__inline");
+}
+
+.unstar, .stargery, .star {
+  background-repeat: no-repeat;
+}
+
+.bg_white {
+  background: #fff;
+}
+
+.bg_gary {
+  background: #f5f5f9;
+}
+
+.loadingMore p {
+  text-align: center;
+  padding: 0.26667rem 0;
+  display: none;
+  font-size: 0.26667rem;
+  color: #909090;
+  line-height: 0.4rem;
+}
+.loadingMore .loadingData {
+  line-height: 0;
+  font-size: 0;
+}
+.loadingMore .loadingData span {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #00aaee;
+  border-radius: 100%;
+  margin-right: 0.13333rem;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.loadingMore .loadingData span:nth-child(1) {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loadingMore .loadingData span:nth-child(2) {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+.confrimBox {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.confrimBox .contBox {
+  background: #fff;
+  border-radius: 0.18667rem;
+  width: 7.73333rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.confrimBox .contBox ._tit {
+  font-size: 0.37333rem;
+  line-height: 0.50667rem;
+  padding: 0.73333rem 0.93333rem;
+  color: #000;
+  text-align: center;
+}
+.confrimBox .contBox ._tit img {
+  max-width: 80%;
+  max-height: 6.66667rem;
+}
+.confrimBox .contBox ._btn {
+  height: 1.17333rem;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: box;
+  border-top: 1px solid #ccc;
+}
+.confrimBox .contBox ._btn a {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  text-align: center;
+  color: #00aaee;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+  font-size: 0.42667rem;
+  display: block;
+}
+.confrimBox .contBox ._btn a:first-child {
+  border-right: 1px solid #ccc;
+}
+
+.showPicWarp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+}
+.showPicWarp img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 90%;
+  max-height: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.networkerrbox {
+  display: inline-block;
+  text-align: center;
+  width: 2.4rem;
+  padding: 1.33333rem 0 0.13333rem;
+  background-image: url("../images/error.png");
+  background-size: 0.96rem auto;
+  background-position: center 0.26667rem;
+  background-repeat: no-repeat;
+  font-size: 0.34667rem;
+}

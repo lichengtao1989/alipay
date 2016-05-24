@@ -1,0 +1,95 @@
+.myCarOrder-model {
+  background: #fff;
+  font-family: "Microsoft YaHei","Segoe UI";
+  padding: 0 0.4rem;
+  box-shadow: 0px 1px 0px 0px rgba(203, 203, 203, 0.5);
+}
+
+.myCarOrder-top {
+  border-bottom: 1px solid #d5d5d5;
+  padding: 0.32rem 0;
+}
+
+.radius-icon-public {
+  width: 0.56rem;
+  height: 0.56rem;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.radius-icon-common {
+  background-color: #36BC99;
+  background-image: url("../images/commonCar.png");
+  background-size: 0.36rem 0.37333rem;
+}
+
+.radius-icon-oil {
+  background-color: #F96268;
+  background-image: url("../images/commonCarOil.png");
+  background-size: 0.26667rem 0.37333rem;
+}
+
+.text-carCommon {
+  font-size: 0.45333rem;
+  color: #000000;
+  letter-spacing: 0;
+  display: inline-block;
+  margin-left: 0.26667rem;
+  line-height: 0.41333rem;
+  vertical-align: middle;
+}
+
+.text-carRight {
+  font-size: 0.45333rem;
+  float: right;
+  line-height: 0.64rem;
+  vertical-align: middle;
+}
+
+.myCarOrder-down {
+  position: relative;
+  padding-top: 0.41333rem;
+  padding-bottom: 0.4rem;
+}
+
+.myCarOrder-down p {
+  color: #888;
+  font-size: 0.37333rem;
+}
+
+.MerchantSucceed {
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+
+.text-serverLeft {
+  display: inline-block;
+  margin-right: 0.66667rem;
+  line-height: 0.37333rem;
+}
+
+.text-evaluate {
+  display: inline-block;
+  color: #00aaee;
+  border: 0.02667rem solid #00aaee;
+  border-radius: 0.08rem;
+  font-size: 0.32rem;
+  text-align: center;
+  float: right;
+  width: 1.28rem;
+  height: 0.58667rem;
+  line-height: 0.58667rem;
+  margin-top: 0.26667rem;
+}
+
+.myCarOrder-model-margin {
+  margin-top: 0.4rem;
+}
+
+.text-serverRight-other {
+  color: #ff7700;
+}

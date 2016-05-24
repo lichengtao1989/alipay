@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="msapplication-tap-highlight" content="no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/payResult.css">
+		<script type="text/javascript">!function(n,e){var t=function(){var n=32,t=e.documentElement,i=t.clientWidth;i&&(t.style.fontSize=n*(i/320)+"px")};if(e.addEventListener){var i="orientationchange"in n?"orientationchange":"resize";n.addEventListener(i,t,!1),e.addEventListener("DOMContentLoaded",t,!1),t()}}(window,document);</script>
+    	<title>支付结果</title>
+</head>
+<body class="bg_white">
+	<div id="warpBox">
+		<div class="payResult">
+			<div class="payHead">
+				<div class="logo"><span></span></div>
+				<p class="payresult t_c">支付成功</p>
+				<p class="paymoney t_c">18.00</p>
+				<p class="payyj t_c">25.00元</p>
+			</div>
+			<div class="payConent">
+				<div class="item">
+					<div class="key">积分奖励</div>
+					<div class="value">获得<span class="red">135</span>会员积分，现有<span class="red">950</span> 积分</div>
+				</div>
+				<div class="item">
+					<div class="key">付款信息</div>
+					<div class="value">
+						<p class="_left">招商银行储蓄卡(8492)</p>
+						<p class="_right">18.00</p>
+					</div>
+				</div>
+			</div>
+			<div class="commentBox t_c">
+				<p class="_tit">请评价库友之家</p>
+				<div class="commentDir">
+					<span data-title="非常不满意" class="unstar"></span>
+					<span data-title="不满意" class="unstar"></span>
+					<span data-title="一般" class="unstar"></span>
+					<span data-title="比较满意" class="unstar"></span>
+					<span data-title="非常满意" class="unstar"></span>
+				</div>
+				<p id="commontDesc" class="desc"></p>
+				<input type="hidden" id="commentFraction">
+				<div class="commentText">
+					<textarea id="commentDescribe" maxlength="250" placeholder="说说您的评价，对其他用户有很大帮助哦"></textarea>
+				</div>
+				<div class="actionBtn">
+					<a href="javascript:void(0);" class="disabled" id="commentSubmit">提交评价</a>
+				</div>
+			</div>
+		</div>
+    	
+	</div>
+	<div class="loading--fullscreen" id="loadingBox">
+        <span class="loading__box"><i class="loading__icon"></i></span>
+    </div>
+</body>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript">
+	$(function(){
+		QccrCom._hideLoading();
+		$('#warpBox').on({
+			click : function(){
+				$('#commentSubmit').removeClass('disabled');
+				var _index = $(this).index(),
+					_dir = $(this).attr('data-title'),
+					_span = $('#warpBox .commentDir span');
+				_span.removeClass('star');
+				_span.each(function(index){
+					if(index <= _index){
+						$(this).addClass('star');
+					}
+				});
+				$('#commontDesc').html(_dir);
+				$('#commentFraction').val(_index+1);
+			}
+		},'.commentDir span').on({
+			click : function(){
+				if($(this).hasClass('disabled')){
+					return;
+				}
+				if(!$('#commentFraction').val()){
+					QccrCom.setMsg("请先评价服务");
+					return;
+				}
+			}
+		},'#commentSubmit');
+
+	});
+</script>
+</html>

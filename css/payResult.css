@@ -1,0 +1,271 @@
+.payResult .tipShow {
+  color: #a7a7a7;
+  font-size: 0.37333rem;
+  line-height: 0.50667rem;
+  padding: 0.32rem 0.13333rem;
+  background: #F5F5F9;
+  text-align: center;
+}
+.payResult .tipShow a {
+  color: #00aaee;
+}
+.payResult .topBusiness {
+  margin-bottom: 0.4rem;
+  color: #4f4f4f;
+  height: 0.53333rem;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+}
+.payResult .topBusiness span {
+  font-size: 0.4rem;
+  height: 0.53333rem;
+  line-height: 0.53333rem;
+  overflow: hidden;
+  display: inline-block;
+  top: 0;
+  vertical-align: top;
+}
+.payResult .topBusiness .BusinessLogo {
+  padding-right: 0.8rem;
+  background-size: 0.53333rem auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.payResult .topBusiness .arrow {
+  background-image: url("../images/arrow.png?__inline");
+  padding-left: 0.26667rem;
+  background-size: 0.21333rem auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.payResult .topBusiness .text {
+  max-width: 6.66667rem;
+  padding: 0 0.13333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.payResult .payHead {
+  padding: 0.53333rem 0.42667rem;
+}
+.payResult .logo {
+  height: 1.86667rem;
+  text-align: center;
+}
+.payResult .logo span {
+  overflow: hidden;
+  display: inline-block;
+  width: 1.86667rem;
+  height: 1.86667rem;
+  background-color: #00aaee;
+  border-radius: 50%;
+  background-image: url("../images/alipaylogo.png?__inline");
+  background-size: 1.56rem auto;
+  background-position: 0.30667rem center;
+  background-repeat: no-repeat;
+}
+.payResult .payresult {
+  padding: 0.26667rem 0;
+  font-size: 0.48rem;
+  line-height: 0.66667rem;
+  color: #00aaee;
+}
+.payResult .paymoney {
+  font-size: 0.74667rem;
+  line-height: 0.89333rem;
+  color: #000;
+}
+.payResult .payyj {
+  font-size: 0.32rem;
+  line-height: 0.44rem;
+  color: #a5a5a5;
+  text-decoration: line-through;
+}
+.payResult .block {
+  color: #000;
+}
+.payResult .block_gary {
+  color: #333;
+}
+.payResult .block_gary_gary {
+  color: #888;
+}
+.payResult .orange {
+  color: #ff8208;
+}
+.payResult .payConent {
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+}
+.payResult .item {
+  padding: 0.30667rem 0.42667rem;
+  border-top: 1px solid #ddd;
+  display: -webkit-box;
+  display: box;
+  font-size: 0.4rem;
+}
+.payResult .key {
+  color: #000;
+  width: 2.13333rem;
+  padding-right: 0.2rem;
+  line-height: 0.56rem;
+}
+.payResult .value {
+  line-height: 0.56rem;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  color: #888;
+  display: -webkit-box;
+  display: box;
+}
+.payResult .value .red {
+  padding: 0 0.08rem;
+  color: #FD8C8C;
+}
+.payResult .value ._left {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+.payResult .value ._right {
+  text-align: right;
+  padding-left: 0.13333rem;
+  min-width: 1.06667rem;
+}
+.payResult .commentBox {
+  padding-top: 0.53333rem;
+}
+.payResult .commentBox.detailShow {
+  padding: 0 0 0.53333rem;
+  border-bottom: 1px solid #ddd;
+}
+.payResult .commentBox ._tit {
+  font-size: 0.4rem;
+  line-height: 0.48rem;
+  color: #333;
+}
+.payResult .commentBox .commentDir {
+  padding: 0.4rem 0;
+  height: 0.66667rem;
+}
+.payResult .commentBox .commentDir span {
+  display: inline-block;
+  width: 0.66667rem;
+  height: 0.66667rem;
+  background-size: 0.66667rem;
+  padding-right: 0.26667rem;
+}
+.payResult .commentBox .desc {
+  font-size: 0.4rem;
+  line-height: 0.48rem;
+  height: 0.48rem;
+  overflow: hidden;
+  color: #ff6b00;
+}
+.payResult .commentBox .desc.block {
+  color: #000;
+}
+.payResult .commentText {
+  padding: 0.4rem;
+}
+.payResult .commentText textarea {
+  width: 100%;
+  height: 3.2rem;
+  resize: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e2;
+  padding: 0.26667rem 0.4rem 0;
+  color: #a5a5a5;
+  font-size: 0.34667rem;
+  line-height: 0.42667rem;
+}
+.payResult .actionBtn {
+  padding: 0.26667rem 0.4rem 0.66667rem;
+}
+.payResult .actionBtn a {
+  display: block;
+  width: 100%;
+  height: 1.12rem;
+  line-height: 1.12rem;
+  font-size: 0.48rem;
+  background: #00aaee;
+  border-radius: 5px;
+  color: #fff;
+}
+.payResult .actionBtn a.disabled {
+  background: #ddd;
+  color: #bbb;
+}
+.payResult .actionBtn a.btn_normal {
+  color: #000;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.payResult .payEwmBox {
+  padding: 0.66667rem 0.4rem;
+}
+.payResult .payEwmBox.ewm_border {
+  border-bottom: 1px solid #ddd;
+}
+.payResult .payEwmBox ._tit {
+  font-size: 0.4rem;
+  line-height: 0.48rem;
+  color: #888;
+  padding-bottom: 0.4rem;
+}
+.payResult .payEwmBox ._num {
+  font-size: 0.48rem;
+  line-height: 0.53333rem;
+  color: #333;
+  padding-bottom: 0.53333rem;
+}
+.payResult .payEwmBox .ewmImg img {
+  width: 4.04rem;
+  max-width: 100%;
+}
+.payResult .footerBtn {
+  width: 100%;
+  height: 1.65333rem;
+  padding: 0.26667rem 0.4rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  display: -webkit-box;
+  display: box;
+}
+.payResult .footerBtn a {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  height: 1.09333rem;
+  line-height: 1.09333rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  color: #000;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  font-size: 0.4rem;
+}
+.payResult .footerBtn a:first-child {
+  margin-left: 0;
+}
+.payResult .footerBtn a:last-child {
+  margin-right: 0;
+}
+.payResult .footerBtn a.btn-blue {
+  background: #00aaee;
+  color: #fff;
+  border: 1px solid #00aaee;
+}
+
+.footerBody {
+  padding-bottom: 1.66667rem;
+}

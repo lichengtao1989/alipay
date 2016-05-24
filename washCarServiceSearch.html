@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="msapplication-tap-highlight" content="no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/search.css"> 
+		<script type="text/javascript">!function(n,e){var t=function(){var n=32,t=e.documentElement,i=t.clientWidth;i&&(t.style.fontSize=n*(i/320)+"px")};if(e.addEventListener){var i="orientationchange"in n?"orientationchange":"resize";n.addEventListener(i,t,!1),e.addEventListener("DOMContentLoaded",t,!1),t()}}(window,document);</script>
+    	<title>搜索商家</title>
+</head>
+<body class="bg_white">
+	<div class="am-search am-input-autoclear">
+		<div class="am-search-input search-start" for>
+			<div class="am-search-icon">
+				<i class="am-icon search"></i>
+				<span class="am-search-ph">搜索</span>
+			</div>
+
+			<input class="am-search-value" id="searchInput" type="text" placeholder="搜索商家名称" value="">
+			<div class="am-search-clear"><i class="am-icon-clear am-icon clear-tiny"></i></div>
+		</div>
+		<button type="button" class="am-search-button" id="cancelBtn" disabled="disabled">取消</button>
+	</div>
+	<dl class="historySearch hide" id="historySearch"></dl>
+	<dl class="washCarList nopad" id="washCarList"></dl>
+</body>
+<script type="text/javascript">!function(){document.addEventListener("DOMContentLoaded",function(){var e=document.querySelectorAll(".am-search");e&&Array.prototype.forEach.call(e,function(e){function t(e,t){e.value.length>0?t.removeAttribute("disabled"):t.setAttribute("disabled","disabled")}var n,i=e.querySelector(".am-search-input"),r=e.querySelector(".am-search-button"),a=e.querySelector("input.am-search-value"),u=e.querySelector(".am-icon-clear");r&&a&&(i.addEventListener("click",function(){i.className="am-search-input",r.style.display="block",a.focus()},!1),t(a,r),a.addEventListener("focus",function(){t(a,r),i.className="am-search-input",r.style.display="block"},!1),a.addEventListener("blur",function(){""===this.value&&(i.className+=" search-start"),n=setTimeout(function(){r.style.display="none"},40)},!1),r.addEventListener("click",function(){""===a.value&&(i.className+=" search-start"),r.style.display="none"},!1),u.addEventListener("click",function(){clearTimeout(n)},!1),a.addEventListener("input",function(){r.style.display="block",t(a,r)},!1))})},!1)}(),function(){document.addEventListener("DOMContentLoaded",function(){var e=document.querySelectorAll(".am-input-autoclear");e&&Array.prototype.forEach.call(e,function(e){var t=e.querySelector(".am-icon-clear"),n=e.querySelector('input[type="text"],input[type="password"],input[type="number"],input[type="tel"],input[type="email"],input[type="url"],input[type="search"]');t&&n&&(t.addEventListener("touchstart",function(){n.value="",n.focus(),t.style.visibility="hidden"},!1),t.addEventListener("click",function(){n.value="",n.focus(),t.style.visibility="hidden"},!1),n.addEventListener("focus",function(){t.style.visibility=n.value.length>0?"visible":"hidden"},!1),n.addEventListener("input",function(){t.style.visibility=n.value.length>0?"visible":"hidden"},!1),n.addEventListener("blur",function(){setTimeout(function(){t.style.visibility="hidden"},20)},!1))})},!1)}(),function(){document.addEventListener("DOMContentLoaded",function(){var e=document.querySelectorAll(".am-textarea-autoheight");e&&Array.prototype.forEach.call(e,function(e){var t=e.currentStyle||document.defaultView.getComputedStyle(e,null),n=Math.ceil(t.height.slice(0,-2)),i=e.clientHeight;e.style.resize="none",e.addEventListener("input",function(){var t=Math.floor((e.scrollHeight-i+n)/n);e.setAttribute("rows",t)},!1)})},!1)}(),function(){document.addEventListener("DOMContentLoaded",function(){function e(e){if(document.getElementById(e)){var t=document.querySelectorAll("[data-am-required-for="+e+"]"),n=!0;return Array.prototype.forEach.call(t,function(e){var t=Number(e.getAttribute("data-am-required-length"))||1;n=n&&e.value.length>=t}),n}return!0}function t(e){var t=e.target.getAttribute("data-am-required-for");n(t)}function n(t){var n=document.getElementById(t);n&&(e(t)?n.removeAttribute("disabled"):n.setAttribute("disabled","disabled"))}var i=document.querySelectorAll("[data-am-required-for]"),r={};Array.prototype.forEach.call(i,function(e){e.addEventListener("input",t),e.addEventListener("focus",t),e.addEventListener("blur",t);var i=e.getAttribute("data-am-required-for");r[i]||(n(i),r[i]=!0)})})}();</script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/search.js"></script>
+</html>

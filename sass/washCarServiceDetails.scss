@@ -1,0 +1,375 @@
+@charset"UTF-8";
+@import"mixin";
+.detailMain {
+    .detailHeard {
+        padding: 0 pxToRem(30);
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .detailTop {
+        padding: pxToRem(24) 0;
+        border-bottom: 1px solid #dcdcdc;
+        @include box;
+        .layImg {
+            padding-right: pxToRem(30);
+            width: pxToRem(150);
+            position: relative;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: pxToRem(150) pxToRem(150);
+            min-height: pxToRem(150);
+        }
+        .mainInfo {
+            @include flex;
+        }
+        ._title {
+            font-size: pxToRem(32);
+            @include textell;
+            height: pxToRem(36);
+            line-height: pxToRem(36);
+            &.disabled {
+                color: #888;
+            }
+        }
+        ._dirs {
+            height: pxToRem(30);
+            line-height: pxToRem(30);
+            color: #888;
+            font-size: pxToRem(26);
+            span {
+                border: 1px solid #888;
+                padding: 0 pxToRem(9);
+                border-radius: 4px;
+            }
+        }
+        ._comment {
+            padding: pxToRem(22) 0;
+            height: pxToRem(28);
+            overflow: hidden;
+            @include box;
+            ._icon {
+                span {
+                    display: inline-block;
+                    min-width: pxToRem(28);
+                    height: pxToRem(28);
+                    background-size: pxToRem(28);
+                }
+            }
+            ._text {
+                @include flex;
+                padding-left: pxToRem(10);
+                color: #ff5000;
+                font-size: pxToRem(28);
+            }
+        }
+    }
+    .detailBot {
+        height: pxToRem(68);
+        line-height: pxToRem(68);
+        font-size: pxToRem(28);
+        color: #a4a4a4;
+        position: relative;
+        padding: 0 pxToRem(86) 0 pxToRem(39);
+        overflow: hidden;
+        .dw {
+            width: pxToRem(25);
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('../images/dingwei.png?__inline');
+            background-size: pxToRem(24) auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+        .infos {
+            @include box;
+            p {
+                @include flex;
+                overflow: hidden;
+            }
+            ._distance {
+                min-width: pxToRem(160);
+            }
+        }
+        .tel {
+            background-image: url('../images/phone.png?__inline');
+            background-size: pxToRem(38) pxToRem(38);
+            background-position: right center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: pxToRem((68-40)/2);
+            border-left: 1px solid #d9d9d9;
+            right: 0;
+            height: pxToRem(40);
+            display: block;
+            width: pxToRem(56);
+        }
+    }
+    .serviceList {
+        padding: pxToRem(32) 0 0;
+        dl {
+            border-bottom: 1px solid #e5e5e5;
+            background: #fff;
+        }
+        dt{
+            font-size:pxToRem(30);
+            color:#000;
+            padding:0 pxToRem(30);
+            line-height:pxToRem(70);
+            line-height:pxToRem(70);
+            span{
+                float:right;
+                color:#888;      
+            }
+        }
+        dd {
+            @include box;
+            position:relative;
+            border-top: 1px solid #e5e5e5;
+            padding: pxToRem(30);
+            ._left {
+                @include flex;
+            }
+            ._right {
+                padding-left: pxToRem(20);
+                min-width: pxToRem(150);
+                .btn{
+                    display:inline-block;
+                    width:pxToRem(124);
+                    height:pxToRem(46);
+                    line-height:pxToRem(46);
+                    color:#fff;
+                    font-size:pxToRem(26);
+                    background:#00aaee;
+                    border-radius:5px;
+                    text-align:center;
+                }
+            }
+            ._tit {
+                font-size: pxToRem(30);
+                line-height: pxToRem(46);
+                color: #000;
+                padding-bottom: pxToRem(20);
+            }
+            .price{
+                line-height: pxToRem(46);
+                padding-bottom: pxToRem(20);
+            }
+            ._infos {
+                font-size: pxToRem(26);
+                line-height: pxToRem(36);
+                height:pxToRem(70);
+                @include textell(2);
+                overflow:hidden;
+                color: #888;
+            }
+            .big {
+                color: #ff5300;
+                font-size: pxToRem(38);
+            }
+            .small {
+                padding-right:pxToRem(10);
+                color: #888;
+                text-decoration: line-through;
+                font-size: pxToRem(28);
+            }
+        }
+        .usePlan{
+            line-height:pxToRem(36);
+            font-size:pxToRem(28);
+            width:100%;
+            h3{
+                font-weight:100;
+                color:#888;
+            }
+            p{
+                padding:pxToRem(10) 0 pxToRem(30);
+                color:#000;                
+            }
+            .process{
+                padding-top:pxToRem(20);
+                @include box;
+                .processitem{
+                    padding-top:pxToRem(64);
+                    @include flex;
+                    ._lctext{
+                        width:100%;
+                        height:pxToRem(36);
+                        line-height:pxToRem(36);
+                        display:block;
+                        position:relative;
+                        color:#888;
+                        &:after{
+                            display:block;
+                            width:100%;
+                            height:0;
+                            border:2px solid #888;
+                            position:absolute;
+                            z-index:1;
+                            top:pxToRem(-35);
+                            left:0;
+                            content:"";
+
+                        }
+                        i{
+                            z-index:10;
+                            position:absolute;
+                            display:block;
+                            background:#fff;
+                            width:pxToRem(60);
+                            top:pxToRem(-44);
+                            left:0;
+                            height:pxToRem(24);
+                            &:after{
+                                @include translate;
+                                content:"";
+                                display:block;
+                                position:absolute;
+                                border:2px solid #888;
+                                width:pxToRem(32);
+                                height:pxToRem(32);
+                                border-radius:50%;
+                                top:50%;
+                                left:50%;
+                            }
+                        }
+                       
+                    }
+                    &:last-child{
+                        width:pxToRem(60);
+                        @include flex(0);
+                        ._lctext{
+                            text-align:right;
+                            &:after{
+                                display:none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ._fot {
+        padding: 0 pxToRem(30) pxToRem(130);
+        text-align: center;
+        font-size: pxToRem(26);
+        line-height: pxToRem(30);
+        color: #888;
+    }
+    /* .payBox {
+        width: 100%;
+        height: pxToRem(112);
+        line-height: pxToRem(112);
+        overflow: hidden;
+        position: fixed;
+        z-index: 10;
+        background: #fff;
+        bottom: 0;
+        left: 0;
+        @include box;
+        ._left{
+        	border-top:1px solid #d6d6d6;
+        	@include boxsizing;
+			@include flex;
+			padding:0 pxToRem(10) 0 pxToRem(30);
+			font-size:pxToRem(34);
+			color:#000;
+			span{
+				font-size:pxToRem(30);
+				color:#ff5300;
+			}
+        }
+        ._right{
+        	width:pxToRem(300);
+        	a{
+        		display:block;
+        		text-align:center;
+        		width: 100%;
+        		height: pxToRem(112);
+        		color:#fff;
+        		font-size:pxToRem(34);
+        		background:#00aaee;
+        		&.disabled{
+        			background:#ddd;
+        			color:#bbb;
+        		}
+        	}
+        }
+    } */
+}
+.commentBox {
+    padding: pxToRem(30) 0;
+}
+.commentList {
+    background: #fff;
+    dt {
+        border-bottom: 1px solid #e5e5e5;
+        border-top: 1px solid #e5e5e5;
+        padding: 0 pxToRem(50) 0 pxToRem(30);
+        line-height: pxToRem(90);
+        font-size: pxToRem(34);
+        position: relative;
+        &:after {
+            content: "";
+            background-image: url('../images/arrow.png?__inline');
+            background-size: 100% 100%;
+            display: block;
+            width: pxToRem(16);
+            height: pxToRem(27);
+            position: absolute;
+            top: 50%;
+            right: pxToRem(30);
+            @include translate(0);
+        }
+    }
+    dd {
+        padding: pxToRem(24) pxToRem(24) 0 pxToRem(30);
+        border-bottom: 1px solid #e5e5e5;
+        @include box;
+    }
+    ._left {
+        height: pxToRem(90);
+        width: pxToRem(90);
+        padding-right: pxToRem(30);
+        background-size: pxToRem(90) pxToRem(90);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-image:url('../images/placeholder.png?__inline');
+    }
+    ._right {
+        @include flex;
+        padding-bottom: pxToRem(30);
+    }
+    ._top {
+        @include box;
+        line-height: pxToRem(46);
+        height: pxToRem(46);
+        overflow: hidden;
+    }
+    ._name {
+        @include flex;
+        font-size: pxToRem(34);
+    }
+    ._comment {
+        padding: pxToRem(14) 0;
+        height: pxToRem(28);
+        span {
+            display: inline-block;
+            width: pxToRem(28);
+            height: pxToRem(28);
+            background-size: pxToRem(28);
+        }
+    }
+    ._time {
+        color: #888;
+        min-width: pxToRem(160);
+        font-size: pxToRem(24);
+    }
+    ._commentstr {
+        font-size: pxToRem(28);
+        color: #888;
+        line-height: pxToRem(36);
+    }
+}
+
